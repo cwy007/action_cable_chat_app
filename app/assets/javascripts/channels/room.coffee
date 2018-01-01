@@ -7,7 +7,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
   received: (data) ->
     unless data.message.blank?
-      $('#messages-table').append data.message 
+      $('#messages-table').append data.message
       scroll_bottom()
     # Called when there's incoming data on the websocket for this channel
 
@@ -17,7 +17,7 @@ $(document).on 'turbolinks:load', ->
 
 submit_message = () ->
   $('#message_content').on 'keydown', (event) ->
-    if event.keyCode is 13
+    if event.keyCode is 13 && !event.shiftKey 
       $('input').click()
       event.target.value = ''
       event.preventDefault()
