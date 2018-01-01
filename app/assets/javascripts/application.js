@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// first try js in rails
+// alert('hello, world!');
+
+// first define a function example
+// greeting_doubler = function(phrase) {
+//   alert(phrase + " " + phrase);
+// };
+//
+// greeting_doubler('hello, world!');
