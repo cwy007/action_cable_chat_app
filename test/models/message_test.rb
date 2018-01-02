@@ -14,4 +14,9 @@ class MessageTest < ActiveSupport::TestCase
     @message.content = " "
     assert !@message.valid?
   end
+
+  test "should mention user example" do
+    message = users(:example).messages.build(content: "hi!, @example")
+    assert message.mentions[0], users(:example)
+  end
 end
